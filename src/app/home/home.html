@@ -1,0 +1,9 @@
+<div *ngIf="!frontPageSections">Loading...</div>
+
+<div *ngIf="frontPageSections">
+  <app-section
+    *ngFor="let section of frontPageSections"
+    [title]="section.header"
+    [items]="section.data">
+  </app-section>
+</div>

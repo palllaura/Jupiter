@@ -1,0 +1,8 @@
+<h2 class="text-2xl font-bold my-4">{{ title }}</h2>
+
+<div class="flex overflow-x-auto gap-4 pb-4">
+  <app-item-card
+    *ngFor="let item of items"
+    [item]="item">
+  </app-item-card>
+</div>
