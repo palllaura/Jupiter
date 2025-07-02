@@ -1,8 +1,16 @@
-<h2 class="text-2xl font-bold my-4">{{ title }}</h2>
+<div class="section">
+  <h2>{{ title }}</h2>
 
-<div class="flex overflow-x-auto gap-4 pb-4">
-  <app-item-card
-    *ngFor="let item of items"
-    [item]="item">
-  </app-item-card>
+  <div class="scroll-wrapper">
+    <button class="scroll-btn left" (click)="scrollLeft()">←</button>
+
+    <div class="scroll-row" #scrollContainer>
+      <app-item-card
+        *ngFor="let item of items"
+        [item]="item"
+      ></app-item-card>
+    </div>
+
+    <button class="scroll-btn right" (click)="scrollRight()">→</button>
+  </div>
 </div>

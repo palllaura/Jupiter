@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef } from '@angular/core';
 import { ItemCard } from '../item-card/item-card';
 import { CommonModule } from '@angular/common';
 
@@ -11,5 +11,19 @@ import { CommonModule } from '@angular/common';
 })
 export class Section {
   @Input() title!: string;
-  @Input() items: any[] = [];
+  @Input() items: any[] = [];@ViewChild('scrollContainer', { static: false }) scrollContainer!: ElementRef;
+
+  scrollLeft(): void {
+    this.scrollContainer.nativeElement.scrollBy({
+      left: -300,
+      behavior: 'smooth'
+    });
+  }
+
+  scrollRight(): void {
+    this.scrollContainer.nativeElement.scrollBy({
+      left: 300,
+      behavior: 'smooth'
+    });
+  }
 }
