@@ -15,14 +15,14 @@ export class Section {
 
   scrollLeft(): void {
     this.scrollContainer.nativeElement.scrollBy({
-      left: -300,
+      left: -1000,
       behavior: 'smooth'
     });
   }
 
   scrollRight(): void {
     this.scrollContainer.nativeElement.scrollBy({
-      left: 300,
+      left: 1000,
       behavior: 'smooth'
     });
   }

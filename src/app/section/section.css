@@ -10,7 +10,7 @@
 }
 
 .scroll-row::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
 }
 
 .scroll-wrapper {
