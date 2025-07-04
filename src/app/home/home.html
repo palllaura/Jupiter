@@ -1,8 +1,8 @@
-<div *ngIf="!frontPageSections">Loading...</div>
+<app-banner *ngIf="heroBanner" [item]="heroBanner"></app-banner>
 
-<div *ngIf="frontPageSections">
+<div *ngIf="sections">
   <app-section
-    *ngFor="let section of frontPageSections"
+    *ngFor="let section of sections"
     [title]="section.header"
     [items]="section.data">
   </app-section>
