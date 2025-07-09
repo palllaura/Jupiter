@@ -1,4 +1,6 @@
-<div class="card" (click)="logClick()">
-  <img [src]="imageUrl" alt="{{ item.heading }}"/>
+<div class="card">
+  <button class="fav-button" (click)="logFavourite()">╋</button>
+  <span class="add-fav-text">Lisa lemmikutesse</span>
+  <img [src]="imageUrl" alt="{{ item.heading }}" (click)="logClick()"/>
   <div class="tooltip">{{ item.heading }}</div>
 </div>

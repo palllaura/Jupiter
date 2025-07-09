@@ -3,10 +3,46 @@
   flex-shrink: 0;
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 .card img {
   width: 100%;
   border-radius: 4px;
+}
+
+.fav-button {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.559);
+  border: none;
+  font-size: 2rem;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.card:hover .fav-button {
+  visibility: visible;
+}
+
+.fav-button:hover {
+  color: white;
+}
+
+.add-fav-text {
+  position: absolute;
+  top: 15px;
+  left: 50px;
+  font-size: 1rem;
+  padding: 0 5px 0 5px;
+  color: white;
+  background-color: #1a2a39;
+  visibility: hidden;
+}
+
+.fav-button:hover + .add-fav-text {
+  visibility: visible;
 }
 
 .tooltip {
@@ -16,14 +52,14 @@
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #1a2a39;
-  color: #fff;
+  background-color: white;
+  color: #1a2a39;
   border-radius: 4px;
   white-space: nowrap;
   transition: opacity 0.3s ease;
   pointer-events: none;
   width: 100%;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: lighter;
   text-align: center;
   text-wrap-mode: wrap;

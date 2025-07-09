@@ -18,4 +18,8 @@ export class ItemCard {
     logClick(): void {
       console.log('User clicked on:', this.item.heading);
   }
+
+    logFavourite(): void {
+      console.log('Added to favourites:', this.item.heading);
+  }
 }

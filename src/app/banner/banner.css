@@ -27,6 +27,7 @@
   background-color: #1a2a39;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .banner-button:hover {
