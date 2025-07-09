@@ -1,10 +1,39 @@
 # Jupiter
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
+This is a frontend-only project that recreates the look and feel of the [Jupiter](https://jupiter.err.ee/) streaming service homepage using **Angular 17+**. It displays horizontal sections of content, a hero banner, and visually mimics the original site's layout.
 
-## Development server
+Data is fetched from a live ERR API endpoint and rendered dynamically into responsive carousels.
 
-To start a local development server, run:
+## Features
+
+- Responsive layout using CSS Flexbox and Grid
+- Dynamic content loading from ERR API
+- Hero banner with background image and title
+- Horizontal scrolling carousels with custom navigation buttons
+
+## Tech Stack
+
+- **Angular 17+**
+- **TypeScript**
+- **RxJS** for reactive programming
+- **SCSS/CSS** for styling
+- Fetching data from ERR API
+
+
+## Setup & Development
+
+Clone the repository:
+```bash
+git clone https://github.com/palllaura/Jupiter.git
+cd jupiter
+```
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 ng serve
@@ -12,48 +41,11 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## API
+The data is pulled from the following endpoint:
 
 ```bash
-ng generate --help
+https://services.err.ee/api/v2/category/getByUrl?url=video&domain=jupiter.err.ee
 ```
+<img width="1241" alt="Screenshot 2025-07-09 at 17 37 55" src="https://github.com/user-attachments/assets/c4bcc5e9-3d22-4d71-a664-4294cd42e1c1" />
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
