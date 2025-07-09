@@ -13,6 +13,11 @@ export class Banner {
     @Input() item: any;
 
     get imageUrl(): string {
-    return this.item.photos?.[0]?.photoTypes?.["2"]?.url ?? '';
-  }
+      return this.item.photos?.[0]?.photoTypes?.["2"]?.url ?? '';
+    }
+
+    logClick(): void {
+      console.log('User clicked on:', this.item.heading);
+    }
+
 }

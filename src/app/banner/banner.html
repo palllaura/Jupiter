@@ -1,6 +1,9 @@
 <div class="banner" [style.backgroundImage]="'url(' + imageUrl + ')'">
-  <div class="overlay">
+  <div class="banner-content">
+    <button class="banner-button" (click)="logClick()">▷ Vaata</button>
     <h1>{{ item.heading }}</h1>
+  <div class="overlay">
     <div [innerHTML]="item.lead"></div>
+  </div>
   </div>
 </div>

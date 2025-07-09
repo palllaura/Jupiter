@@ -7,12 +7,28 @@
   margin-bottom: 2rem;
 }
 
-.overlay {
+.banner-content {
   position: absolute;
-  bottom: 20px;
-  left: 40px;
+  bottom: 1rem;
+  left: 2rem;
+  right: 2rem;
+}
+
+.overlay {
   color: white;
-  background-color: rgba(0,0,0,0.4);
-  padding: 1rem 2rem;
+  background-color: #1a2a399d;
+  padding: 1rem;
   border-radius: 8px;
+}
+
+.banner-button {
+  border: none;
+  color: white;
+  background-color: #1a2a39;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.banner-button:hover {
+  background-color: #0c141b;
 }

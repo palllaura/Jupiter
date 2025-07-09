@@ -12,6 +12,10 @@ export class ItemCard {
   @Input() item: any;
 
     get imageUrl(): string {
-    return this.item.verticalPhotos?.[0]?.photoTypes?.["80"]?.url ?? '';
+      return this.item.verticalPhotos?.[0]?.photoTypes?.["80"]?.url ?? '';
+  }
+
+    logClick(): void {
+      console.log('User clicked on:', this.item.heading);
   }
 }

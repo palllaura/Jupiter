@@ -24,14 +24,14 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.679);
+  color: #203443;
   border: none;
-  font-size: 2rem;
+  font-size: 1rem;
   width: 40px;
-  height: 60px;
+  height: 40px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .scroll-btn.left {
