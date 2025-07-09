@@ -15,14 +15,19 @@ getAllItems(): Observable<any[]> {
   return this.http.get<any>(this.apiUrl).pipe(
     map(response => {
       const frontPage = response?.data?.category?.frontPage;
-      console.log('FrontPage:', frontPage);
       if (!Array.isArray(frontPage)) {
         return [];
       }
-      return frontPage.filter((section: any) => section.hasOwnProperty('highTimeline'));
+
+      return frontPage.filter((section: any) =>
+        section.hasOwnProperty('highTimeline') &&
+        Array.isArray(section.data) &&
+        section.data.length > 0
+      );
     })
   );
 }
+
 
 getHeroBanner(): Observable<any | null> {
   return this.getAllItems().pipe(
@@ -32,7 +37,6 @@ getHeroBanner(): Observable<any | null> {
     })
   );
 }
-
 
   getSections(): Observable<any[]> {
     return this.getAllItems().pipe(
